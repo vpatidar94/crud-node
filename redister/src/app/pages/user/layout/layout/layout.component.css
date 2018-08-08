@@ -1,0 +1,8 @@
+mat-sidenav {
+    min-width: 15%;
+    min-height: 90vh;
+}
+.section-content {
+    min-height: 80vh;
+    margin-left: 2%;
+}

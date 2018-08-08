@@ -1,0 +1,32 @@
+<div *ngIf="showMsg" fxLayout="column" >
+  <mat-card color="warn">Wrong username or password</mat-card>
+</div>
+<section class="login-comp">
+  <div fxLayoutAlign="center center" class="card" *ngIf="isLogin">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <h2>Login</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="reg-form">
+          <form #loginForm="ngForm" fxLayout="column">
+            <mat-form-field fxFlex="100"> 
+              <input matInput email type="email"  placeholder="Email" [(ngModel)]="userLoginVo.email" name="email" required>
+            </mat-form-field>
+        
+            <mat-form-field fxFlex="100">
+              <input matInput password type="password" placeholder="Password" [(ngModel)]="userLoginVo.password"  name="password" required>
+            </mat-form-field>
+          </form>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="login()">Login</button>
+        <button mat-button color="warn" (click)="register()">Register</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxLayoutAlign="center center" *ngIf="!isLogin">
+    <app-register></app-register>
+</div>
+</section>

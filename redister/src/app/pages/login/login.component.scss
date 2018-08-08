@@ -1,0 +1,11 @@
+.login-comp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    overflow-y: hidden;
+
+    .card {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+<section class="home">
+  <div fxLayout="column">
+  <h2>Welcome {{userInfoVo.firstName}}</h2>
+  <div><span>Email:  {{' ' + userInfoVo.email}}</span></div>
+  <div><span>Cell:  {{' ' + userInfoVo.cell}}</span></div>
+</div>
+<br>
+<div>
+    <button mat-raised-button color="primary" (click)="logout()" >Logout</button>
+
+</div>
+</section>

@@ -1,0 +1,30 @@
+<div *ngIf="showMsg" fxLayout="column" >
+    <mat-card class="msg">Registerd Successfully</mat-card>
+</div>
+<section class="register-comp">
+  <div fxLayout="column">
+    <h2>Fill details to register</h2>
+  </div>
+  <div class="reg-form">
+    <form #regForm="ngForm" fxFlex="100%" fxLayout="column">
+        <mat-form-field>
+            <input matInput placeholder="First Name" name="firstname" [(ngModel)]="userInfoVo.firstName" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Last Name" [(ngModel)]="userInfoVo.lastName" name="lastname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Contact No" [(ngModel)]="userInfoVo.cell" name="cell">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput email type="email" placeholder="Email" name="email" [(ngModel)]="userInfoVo.email" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput password type="password" placeholder="password" [(ngModel)]="userInfoVo.password" name="password" required>
+        </mat-form-field>
+    </form>
+  </div>
+  <div class="reg-button" fxLayout="row">
+      <button mat-raised-button color="primary" (click)="addUser()" [disabled]="regForm.form.invalid" >Register</button>
+  </div>
+</section>
